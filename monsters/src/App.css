@@ -1,7 +1,10 @@
-.card-list {
-  width: 85vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+.App {
+  text-align: center;
+}
+
+h1{
+  margin-left: 5%;
+  font-family: 'Carter One';
+  font-size: 72px;
+  color: lightblue
 }
