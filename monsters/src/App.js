@@ -23,9 +23,11 @@ class App extends Component {
           )
     }
 
+    handleChange(e){
+      this.setState({searchField: e.target.value})
+    }
   
   render () {
-    
     const {monsters, searchField} = this.state; 
     const filteredMonsters = monsters.filter(monster => 
       monster.name.toLowerCase().includes(searchField.toLowerCase()))
@@ -34,7 +36,7 @@ class App extends Component {
     <div className="App">
       <SearchBox 
       placeholder="search monsters"
-      handleChange={e => this.setState({searchField: e.target.value})}
+      handleChange={e => this.handleChange(e)}
       />
       
       <CardList monsters={filteredMonsters} /> 
